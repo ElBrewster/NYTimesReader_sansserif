@@ -1,0 +1,13 @@
+.layoutContainer {
+    background-color: aliceblue;
+}
+
+.newsPaperSections {
+    background-color: bisque;
+    display: flex;
+    gap: 1rem;
+}
+
+.newsPaperSections > * {
+    font-family: sans-serif;
+}
