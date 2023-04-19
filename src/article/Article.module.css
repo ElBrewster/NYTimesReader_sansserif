@@ -1,0 +1,5 @@
+.article {
+    border: 1px solid red;
+    min-height: 2rem;
+    min-width: 2rem;
+}
