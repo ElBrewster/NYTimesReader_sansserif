@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import * as React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import { nanoid } from 'nanoid';
@@ -12,6 +12,7 @@ import BusinessPage from '../pages/business/BusinessPage';
 import FoodPage from '../pages/food/FoodPage';
 import OpinionsPage from '../pages/opinion/OpinionsPage';
 import TopStoriesPage from '../pages/topstories/TopStoriesPage';
+import NoMatch from '../nomatch/NoMatch';
 
 
 export default function App() {
@@ -22,10 +23,11 @@ export default function App() {
     <div className={styles.app}>
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Layout/>}>
-          <Route path="/topstories" element={<TopStoriesPage />}></Route>
-          <Route path="/opinion" element={<OpinionsPage />}></Route>
-          <Route path="/business" element={<BusinessPage />}></Route>
-          <Route path="/food" element={<FoodPage />}></Route>
+          <Route path="/topstories" element={<TopStoriesPage />} />
+          <Route path="/opinion" element={<OpinionsPage />} />
+          <Route path="/business" element={<BusinessPage />} />
+          <Route path="/food" element={<FoodPage />} />
+          <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
 

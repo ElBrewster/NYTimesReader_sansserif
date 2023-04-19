@@ -5,6 +5,7 @@ export default function Modal() {
     return (
         <div className={styles.modalContainer}>
             <p>yo</p>
+            //add the multimedia content
         </div>
     );
 }
