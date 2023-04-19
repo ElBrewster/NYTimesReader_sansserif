@@ -10,6 +10,7 @@ import Layout from '../layout/Layout';
 import BusinessPage from '../pages/business/BusinessPage';
 import FoodPage from '../pages/food/FoodPage';
 import OpinionsPage from '../pages/opinion/OpinionsPage';
+import TopStoriesPage from '../pages/topstories/TopStoriesPage';
 
 
 export default function App() {
@@ -31,7 +32,7 @@ export default function App() {
     {/* <Routes location={state?.backgroundLocation || location}></Routes> */}
       <Routes>
         <Route path="/" element={<Layout/>}>
-          {/* <Route path="/topstories" element={<TopStoriesPage />}></Route> */}
+          <Route path="/topstories" element={<TopStoriesPage />}></Route>
           <Route path="/opinion" element={<OpinionsPage />}></Route>
           <Route path="/business" element={<BusinessPage />}></Route>
           <Route path="/food" element={<FoodPage />}></Route>
