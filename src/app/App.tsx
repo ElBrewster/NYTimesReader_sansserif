@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import styles from "./App.module.css";
 
 import Article from '../article/Article';
-import Layout from '../layout/Layout';
+import Layout from '../Layout';
 import Modal from '../modal/Modal';
 import NoMatch from '../nomatch/NoMatch';
 import ArtsPage from '../pages/arts/ArtsPage';
@@ -44,6 +44,8 @@ export default function App() {
     <div className={styles.app}>
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Layout/>}>
+          //somehow route "/" and "/home" need to be the same
+          <Route index path="/home" element={<HomePage />} />
           <Route path="/arts" element={<ArtsPage/>} />
           <Route path="/automobiles" element={<AutomobilesPage/>} />
           <Route path="/books" element={<BooksPage/>} />
@@ -51,7 +53,6 @@ export default function App() {
           <Route path="/fashion" element={<FashionPage/>} />
           <Route path="/food" element={<FoodPage />} />
           <Route path="/health" element={<HealthPage />} />
-          <Route index path="/home" element={<HomePage />} />
           <Route path="/insider" element={<InsiderPage />} />
           <Route path="/magazine" element={<MagazinePage />} />
           <Route path="/movies" element={<MoviesPage />} />
@@ -75,11 +76,11 @@ export default function App() {
 
       {state?.backgroundLocation && (
         <Routes>
-          <Route path="" element={<Modal />}/>
+          <Route path="/:section/:idmaybeeeee" element={<Modal />}/>
         </Routes>
       )}
  </div>
   )
 }
-// arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
+
 

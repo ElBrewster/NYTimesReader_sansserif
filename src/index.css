@@ -65,16 +65,44 @@ select {
   }
 }
 /* --------------------------- */
-.pending {
-  color: green;
-  text-decoration: none;
-
+.topContainer {
+  background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg);
+  object-fit: cover;
 }
-.active {
-   color:black;
-   text-decoration: none;
+
+.layoutContainer {
+  color: #401c1a;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsPaperSections {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.newsPaperSections > * {
+  align-self: center;
+  border: 1px solid #8f4145;
+  border-radius: .1rem;
+  font-family: sans-serif;
+  flex: auto;
+  padding: .5rem;
 }
 
 a {
+  color: black;
   text-decoration: none;
+}
+
+.active {
+  align-self: center;
+  background-color: #c0bab3;
+  color:#401c1a;
+  font-size: 2rem;
+  font-weight: 900;
 }
