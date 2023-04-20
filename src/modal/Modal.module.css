@@ -1,3 +1,13 @@
+.dialog {
+    background-color: rgb(255, 255, 255, .4);
+    max-height: 50vh;
+    max-width: 50vw;
+}
+
 .modalContainer {
-    background-color: gray;
+    display: grid;
+    justify-content: center;
+    min-height: 10rem;
+    min-width: 10rem;
+    padding: 1rem;
 }

@@ -4,21 +4,19 @@ import styles from './FoodPage.module.css';
 import Article from "../../article/Article";
 
 export default function FoodPage() {
-    // const [myFood, setMyFood] = useState([]);
+    const [myTravel, setMyTravel] = useState([]);
+    let id = nanoid();
 
-    // useEffect(() => {
-    //   fetch("https://api.nytimes.com/svc/topstories/v2/food.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
-    //   .then(res => res.json())
-    //   .then(data=> setMyFood(data.results))
-    // }, [myFood])
+    useEffect(() => {
+      fetch("https://api.nytimes.com/svc/topstories/v2/food.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
+      .then(res => res.json())
+      .then(data=> setMyTravel(data.results))
+    }, [myTravel])
     
-    // const food = myFood.map(article => {
-    //   let id = nanoid();
-    //   return <Article key={id} article={article}/>;
-    // })
-    return (
-        <div className={styles.foodPageContainer}>
-            {/* {food} */}
+    const topStories = myTravel.map((article) => (<Article key={id} article={article}/>));
+    return(
+        <div className={styles.travelPageContainer}>
+            {topStories}
         </div>
     );
 }

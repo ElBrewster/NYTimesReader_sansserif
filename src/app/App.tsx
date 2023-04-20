@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import { nanoid } from 'nanoid';
@@ -35,11 +35,10 @@ import UpshotPage from '../pages/upshot/UpshotPage';
 import USPage from '../pages/us/USPage';
 import WorldPage from '../pages/world/WorldPage';
 
-
 export default function App() {
   let location = useLocation();
   let state = location.state as { backgroundLocation?: Location };
-  
+
   return (
     <div className={styles.app}>
       <Routes location={state?.backgroundLocation || location}>
@@ -76,7 +75,7 @@ export default function App() {
 
       {state?.backgroundLocation && (
         <Routes>
-          <Route path="/:section/:idmaybeeeee" element={<Modal />}/>
+          <Route path="/:section/:multimedia" element={<Modal />}/>
         </Routes>
       )}
  </div>

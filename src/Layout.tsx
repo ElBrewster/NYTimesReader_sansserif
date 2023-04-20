@@ -9,6 +9,7 @@ export default function Layout() {
             <div className="topContainer">
                 <nav className="newsPaperSections">
                     <NavLink to="/arts" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Arts</NavLink>
+                    <NavLink to="/arts" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Arts</NavLink>
                     <NavLink to="/automobiles" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Automobiles</NavLink>
                     <NavLink to="/books" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Books</NavLink>
                     <NavLink to="/fashion" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Fashion</NavLink>        
