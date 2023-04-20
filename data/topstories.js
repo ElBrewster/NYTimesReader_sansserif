@@ -1,10 +1,4 @@
-{
-    status: "OK",
-    copyright: "Copyright (c) 2023 The New York Times Company. All Rights Reserved.",
-    section: "home",
-    last_updated: "2023-04-19T19:38:39-04:00",
-    num_results: 27,
-    results: [
+const results = [
     {
     section: "us",
     subsection: "politics",
@@ -1692,4 +1686,6 @@
     short_url: "https://nyti.ms/3mGOLRm"
     }
     ]
-    }
+
+    export default results;
+    

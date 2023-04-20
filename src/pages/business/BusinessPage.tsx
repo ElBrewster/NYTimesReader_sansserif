@@ -4,21 +4,19 @@ import styles from "./BusinessPage.module.css";
 import Article from "../../article/Article";
 
 export default function BusinessPage() {
-    // const [myBusiness, setMyBusiness] = useState([]);
+    const [myTravel, setMyTravel] = useState([]);
+    let id = nanoid();
 
-    // useEffect(() => {
-    //   fetch("https://api.nytimes.com/svc/topstories/v2/business.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
-    //   .then(res => res.json())
-    //   .then(data=> setMyBusiness(data.results))
-    // }, [myBusiness])
+    useEffect(() => {
+      fetch("https://api.nytimes.com/svc/topstories/v2/business.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
+      .then(res => res.json())
+      .then(data=> setMyTravel(data.results))
+    }, [myTravel])
     
-    // const business = myBusiness.map(article => {
-    //   let id = nanoid();
-    //   return <Article key={id} article={article}/>;
-    // })
-    return (
-        <div className={styles.businessPageContainer}>
-            {/* {business} */}
+    const topStories = myTravel.map((article) => (<Article key={id}  article={article}/>));
+    return(
+        <div className={styles.travelPageContainer}>
+            {topStories}
         </div>
     );
 }
