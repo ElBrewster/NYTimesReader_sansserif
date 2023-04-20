@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./index.css"
 import { NavLink, Outlet } from "react-router-dom";
+import Header from "./header/Header";
 
 export default function Layout() {
     return (
@@ -30,11 +31,8 @@ export default function Layout() {
                 <NavLink to="/sports" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Sports</NavLink>
                 <NavLink to="/us" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>US</NavLink>
                 <NavLink to="/world" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>World</NavLink>
-
-
-
             </nav>
-            <hr />
+            <Header />
             <Outlet />
         </div>
     );

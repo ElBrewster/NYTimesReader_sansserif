@@ -70,19 +70,25 @@ select {
 .layoutContainer {
   background-color: aliceblue;
   display: flex;
+  flex-direction: column;
 }
 
 .newsPaperSections {
   background-color: bisque;
   display: flex;
+  flex-direction: row;
   flex: auto;
   flex-wrap: wrap-reverse;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .newsPaperSections > * {
+  align-self: center;
+  border: 1px solid gray;
   font-family: sans-serif;
   flex: auto;
+  padding: .5rem;
 }
 
 a {
