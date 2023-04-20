@@ -44,6 +44,8 @@ export default function App() {
     <div className={styles.app}>
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Layout/>}>
+          //somehow route "/" and "/home" need to be the same
+          <Route index path="/home" element={<HomePage />} />
           <Route path="/arts" element={<ArtsPage/>} />
           <Route path="/automobiles" element={<AutomobilesPage/>} />
           <Route path="/books" element={<BooksPage/>} />
@@ -51,7 +53,6 @@ export default function App() {
           <Route path="/fashion" element={<FashionPage/>} />
           <Route path="/food" element={<FoodPage />} />
           <Route path="/health" element={<HealthPage />} />
-          <Route index path="/home" element={<HomePage />} />
           <Route path="/insider" element={<InsiderPage />} />
           <Route path="/magazine" element={<MagazinePage />} />
           <Route path="/movies" element={<MoviesPage />} />
