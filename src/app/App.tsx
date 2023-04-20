@@ -76,7 +76,7 @@ export default function App() {
 
       {state?.backgroundLocation && (
         <Routes>
-          <Route path="" element={<Modal />}/>
+          <Route path="/:section/:idmaybeeeee" element={<Modal />}/>
         </Routes>
       )}
  </div>
