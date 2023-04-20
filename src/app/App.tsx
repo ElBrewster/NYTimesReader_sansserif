@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import styles from "./App.module.css";
 
 import Article from '../article/Article';
-import Layout from '../layout/Layout';
+import Layout from '../Layout';
 import Modal from '../modal/Modal';
 import NoMatch from '../nomatch/NoMatch';
 import ArtsPage from '../pages/arts/ArtsPage';
@@ -81,5 +81,5 @@ export default function App() {
  </div>
   )
 }
-// arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
+
 

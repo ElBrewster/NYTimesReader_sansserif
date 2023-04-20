@@ -1,11 +1,11 @@
 import * as React from "react";
-import styles from "./Layout.module.css";
+import "./index.css"
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
     return (
-        <div className={styles.layoutContainer}>
-            <nav className={styles.newsPaperSections}>
+        <div className="layoutContainer">
+            <nav className="newsPaperSections">
                 <NavLink to="/arts" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Arts</NavLink>
                 <NavLink to="/automobiles" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Automobiles</NavLink>
                 <NavLink to="/books" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Books</NavLink>
