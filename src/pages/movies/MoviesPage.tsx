@@ -2,18 +2,22 @@ import { useEffect, useState } from 'react'
 import { nanoid } from 'nanoid';
 import styles from "./MoviesPage.module.css";
 import Article from "../../article/Article";
+import myFetch from '../../../api/apiCalls';
+
 
 export default function MoviesPage() {
-    const [myTravel, setMyTravel] = useState([]);
-    let id = nanoid();
+    const [myMovies, setMyMovies] = useState([]);
 
     useEffect(() => {
-      fetch("https://api.nytimes.com/svc/topstories/v2/movies.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
-      .then(res => res.json())
-      .then(data=> setMyTravel(data.results))
-    }, [myTravel])
+        const promise = myFetch("/movies");
+        promise.then((data) => setMyMovies(data.results));
+    }, [myMovies]);
     
-    const topStories = myTravel.map((article) => (<Article key={id} article={article}/>));
+    const topStories = myMovies.map((article) => {
+        let id = nanoid();
+        return <Article key={id} article={article}/>
+        });
+
     return(
         <div className={styles.travelPageContainer}>
             {topStories}

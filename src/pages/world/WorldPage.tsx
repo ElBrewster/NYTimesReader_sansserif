@@ -2,18 +2,22 @@ import { useEffect, useState } from 'react'
 import { nanoid } from 'nanoid';
 import styles from "./WorldPage.module.css";
 import Article from "../../article/Article";
+import myFetch from '../../../api/apiCalls';
+
 
 export default function WorldPage() {
-    const [myTravel, setMyTravel] = useState([]);
-    let id = nanoid();
+    const [myWorld, setMyWorld] = useState([]);
 
     useEffect(() => {
-      fetch("https://api.nytimes.com/svc/topstories/v2/world.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
-      .then(res => res.json())
-      .then(data=> setMyTravel(data.results))
-    }, [myTravel])
+        const promise = myFetch("/world");
+        promise.then((data) => setMyWorld(data.results));
+    }, [myWorld]);
     
-    const topStories = myTravel.map((article) => (<Article key={id} article={article}/>));
+    const topStories = myWorld.map((article) => {
+        let id = nanoid();
+        return <Article key={id} article={article}/>
+        });
+
     return(
         <div className={styles.travelPageContainer}>
             {topStories}

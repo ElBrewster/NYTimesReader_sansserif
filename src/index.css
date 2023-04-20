@@ -94,6 +94,10 @@ select {
   padding: .5rem;
 }
 
+.newsPaperSections > *:hover {
+  background-color: rgb(235, 219, 221);
+}
+
 a {
   color: black;
   text-decoration: none;

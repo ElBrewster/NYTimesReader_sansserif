@@ -2,18 +2,22 @@ import { useEffect, useState } from 'react'
 import { nanoid } from 'nanoid';
 import styles from "./RealEstatePage.module.css";
 import Article from "../../article/Article";
+import myFetch from '../../../api/apiCalls';
+
 
 export default function RealEstatePage() {
-    const [myTravel, setMyTravel] = useState([]);
-    let id = nanoid();
+    const [myRealEstate, setMyRealEstate] = useState([]);
 
     useEffect(() => {
-      fetch("https://api.nytimes.com/svc/topstories/v2/realestate.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
-      .then(res => res.json())
-      .then(data=> setMyTravel(data.results))
-    }, [myTravel])
+        const promise = myFetch("/realestate");
+        promise.then((data) => setMyRealEstate(data.results));
+    }, [myRealEstate]);
     
-    const topStories = myTravel.map((article) => (<Article key={id} article={article}/>));
+    const topStories = myRealEstate.map((article) => {
+        let id = nanoid();
+        return <Article key={id} article={article}/>
+        });
+
     return(
         <div className={styles.travelPageContainer}>
             {topStories}
