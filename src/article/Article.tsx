@@ -8,8 +8,11 @@ export default function Article({article}) {
     const [click, setClick] = useState(false)
     const {section, subsection, abstract, title, url, byline, multimedia} = article;
     let id = nanoid();
-
-    const multimediaDisplay = multimedia[1] ? <img className={styles.media} src={multimedia[1].url} /> : "";
+    const multimediaDisplay = multimedia[1] ? <div className={styles.imageContainer}>
+                                                <img className={styles.media} src={multimedia[1].url} alt={multimedia[1].caption} /> 
+                                                <p className={styles.abstract}>{multimedia[1].caption}</p>
+                                             </div>
+                                            : "";
     const toggleButtonText = click? "Hide" : "Show More";
     const toggleDiv = click ? <section className={styles.bigView}>
                                 <div>{multimediaDisplay}</div>
@@ -30,10 +33,10 @@ export default function Article({article}) {
                     to={`/${section}/${title}`}
                     state={{id: id, article: article}}
                 >
-                    <h2>{title}</h2>
+                    <h2 className={styles.title}>{title}</h2>
                 </Link>
                 <p className={styles.byline}>{byline}</p>
-                <p>{abstract}</p>
+                <p className={styles.abstract}>{abstract}</p>
                 <button onClick={handleClick} className={styles.hideShowButton}>{toggleButtonText}</button>
                 {toggleDiv}
             </div>
