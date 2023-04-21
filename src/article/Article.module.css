@@ -5,12 +5,26 @@
     min-width: 2rem;
 }
 
+.hideShowButton {
+    margin: .5rem;
+}
+
+.byline {
+    font-style: italic;
+    font-family: 'Roboto Mono', monospace;
+}
 .media {
     max-width: fit-content;
 }
 
+.hrefLink {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
 .bigView {
-    background-color: red;
+    background: linear-gradient(#ffffff, 98%, #956d70);
+    background-color: rgb(149, 109, 112, .2);
     min-width: 100vw;
-    min-height: 100vh;
+    padding: 2rem;
 }

@@ -9,33 +9,18 @@ export default function Article({article}) {
     const {section, subsection, abstract, title, url, byline, multimedia} = article;
     let id = nanoid();
 
-    const multimediaDisplay = multimedia.map((media) => {
-        if(media) {
-            return (<div className={styles.media}>{media.url}</div>)
-        }
-    })
+    const multimediaDisplay = multimedia[1] ? <img className={styles.media} src={multimedia[1].url} /> : "";
     const toggleButtonText = click? "Hide" : "Show More";
     const toggleDiv = click ? <section className={styles.bigView}>
-    <h2>{title}</h2>
-    <p>{byline}</p>
-    <p>{abstract}</p>
-    <a href={url}>link</a>
-    <div>{multimediaDisplay}</div>
-    </section>
-    : "";
+                                <div>{multimediaDisplay}</div>
+                                <a href={url} className={styles.hrefLink}>Go to NYT Article Page</a>
+                            </section>
+                            : "";
 
     function handleClick() {
         setClick(prevClick => !prevClick);
-        if(click) {
-            return (<section className={styles.bigView}>
-                <h2>{title}</h2>
-                <p>{byline}</p>
-                <p>{abstract}</p>
-                <a href={url}>link</a>
-                <div>{multimediaDisplay}</div>
-                </section>);
-        }
     }
+
     return (
         <div>
 
@@ -47,9 +32,9 @@ export default function Article({article}) {
                 >
                     <h2>{title}</h2>
                 </Link>
-                <p>{byline}</p>
+                <p className={styles.byline}>{byline}</p>
                 <p>{abstract}</p>
-                <button onClick={handleClick}>{toggleButtonText}</button>
+                <button onClick={handleClick} className={styles.hideShowButton}>{toggleButtonText}</button>
                 {toggleDiv}
             </div>
         </div>
