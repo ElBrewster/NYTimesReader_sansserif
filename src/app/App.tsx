@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
@@ -7,8 +8,8 @@ import styles from "./App.module.css";
 
 import Article from '../article/Article';
 import Layout from '../Layout';
-import Modal from '../modal/Modal';
 import NoMatch from '../nomatch/NoMatch';
+import MyModal from '../modal/Modal';
 import ArtsPage from '../pages/arts/ArtsPage';
 import AutomobilesPage from '../pages/automobiles/AutomobilesPage';
 import BooksPage from '../pages/books/BooksPage';
@@ -39,12 +40,15 @@ export default function App() {
   let location = useLocation();
   let state = location.state as { backgroundLocation?: Location };
 
+  console.log("location.state", location.state)
+
   return (
     <div className={styles.app}>
+      {/* <Routes > */}
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Layout/>}>
-          //somehow route "/" and "/home" need to be the same
           <Route index path="/home" element={<HomePage />} />
+          {/* <Route index element={<HomePage />} /> */}
           <Route path="/arts" element={<ArtsPage/>} />
           <Route path="/automobiles" element={<AutomobilesPage/>} />
           <Route path="/books" element={<BooksPage/>} />
@@ -64,20 +68,23 @@ export default function App() {
           <Route path="/sports" element={<SportsPage />} />
           <Route path="/sundayreview" element={<SundayReviewPage />} />
           <Route path="/technology" element={<TechnologyPage />} />
-          <Route path="/topstories" element={<TopStoriesPage />} />
+          {/* <Route path="/topstories" element={<TopStoriesPage />} /> */}
           <Route path="/travel" element={<TravelPage />} />
+
+          <Route path="/t-magazine" element={<TravelPage />} />
           <Route path="/upshot" element={<UpshotPage />} />
           <Route path="/us" element={<USPage />} />
           <Route path="/world" element={<WorldPage />} />
           <Route path="*" element={<NoMatch />} />
+          <Route path="/:section/:title" element={<MyModal/>}/>
         </Route>
       </Routes>
 
-      {state?.backgroundLocation && (
+      {/* {state?.backgroundLocation && (
         <Routes>
-          <Route path="/:section/:multimedia" element={<Modal />}/>
+          <Route path="/:section/:title" element={<MyModal />}/>
         </Routes>
-      )}
+      )} */}
  </div>
   )
 }

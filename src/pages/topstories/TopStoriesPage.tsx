@@ -3,35 +3,24 @@ import { nanoid } from 'nanoid';
 import styles from "./TopStoriesPage.module.css";
 import Article from "../../article/Article";
 import { Link, useLocation } from 'react-router-dom';
+import myFetch from '../../../api/apiCalls';
+
 
 export default function TopStoriesPage() {
     const [myTopStories, setMyTopStories] = useState([]);
-    let location = useLocation();
-    let state = location.state as { backgroundLocation?: Location };
-   
+
     useEffect(() => {
-      fetch("https://api.nytimes.com/svc/topstories/v2/home.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
-      .then(res => res.json())
-      .then(data=> setMyTopStories(data.results))
-    }, [myTopStories])
+        const promise = myFetch("/topstories");
+        promise.then((data) => setMyTopStories(data.results));
+    }, []);
     
-    const topStories = myTopStories.map((article) => (<Article article={article}/>));
-    // {
-    //     // console.log("article", article)
-    //     // let section = "topstories";
-    //     // let section = article.section;
-    //     // let id = nanoid();
-    //     return (
-    //         // <Link  
-    //         //     key={id} 
-    //         //     state={{backgroundLocation: location}}
-    //         //     to={`/${article.section}/${article.subsection}`}>
-    //             <Article article={article}/>
-    //         {/* </Link> */}
-    //         );
-    // })
+    const topStories = myTopStories.map((article) => {
+        let id = nanoid();
+        return <Article key={id} article={article}/>
+        });
+
     return(
-        <div className={styles.topStoriesPageContainer}>
+        <div className={styles.travelPageContainer}>
             {topStories}
         </div>
     );

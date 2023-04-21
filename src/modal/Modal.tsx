@@ -1,24 +1,36 @@
-import * as React from "react";
+import { useState } from "react";
 import styles from "./Modal.module.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link, useLocation } from "react-router-dom";
 
-export default function Modal({article}) {
+export default function MyModal() {
+    const [open, setOpen] = useState(false);
     let navigate = useNavigate();
-    let { section } = useParams();
-    
+    let location = useLocation();
+    let article = location.state.article;
+    const {section, subsection, abstract, title, url, byline, multimedia} = article;
 
-    function onDismiss() {
-        navigate(-1);
-    }
+    const multimediaDisplay = multimedia.map((media) => {
+        if(media) {
+            return (<div className={styles.media}>{media.url}</div>)
+        }
+    })
+    const onOpenModal = () => setOpen(true);
+    const onCloseModal = () => setOpen(false);
+    const onDismiss = () => navigate(-1);
 
     return (
-            <dialog className={styles.dialog}>
+        <div>
+            <button onClick={onOpenModal}>See More</button>
+            <dialog open={open} onClose={onCloseModal} className={styles.dialog}>
                 <div className={styles.modalContainer}>
-                    <p>{article.title}</p>
-                    <p>yo</p>
-                    //add the multimedia content
-                </div>
+                    <h2>{title}</h2>
+                    <p>{byline}</p>
+                    <p>{abstract}</p>
+                    <a href={url}>Visit</a>
+                    <div>{multimediaDisplay}</div>
+                 </div>
                 <button onClick={onDismiss}>GO BACK</button>
             </dialog>
+        </div>
     );
 }

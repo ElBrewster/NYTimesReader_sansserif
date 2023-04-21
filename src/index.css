@@ -65,8 +65,10 @@ select {
   }
 }
 /* --------------------------- */
+
 .topContainer {
   background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg);
+  background-size: cover;
   object-fit: cover;
 }
 
@@ -92,6 +94,10 @@ select {
   font-family: sans-serif;
   flex: auto;
   padding: .5rem;
+}
+
+.newsPaperSections > *:hover {
+  background-color: rgb(235, 219, 221);
 }
 
 a {

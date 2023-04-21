@@ -2,17 +2,22 @@ import { useEffect, useState } from 'react'
 import { nanoid } from 'nanoid';
 import styles from "./FashionPage.module.css";
 import Article from "../../article/Article";
+import myFetch from '../../../api/apiCalls';
+
 
 export default function FashionPage() {
-    const [myTravel, setMyTravel] = useState([]);
+    const [myFasion, setMyFashion] = useState([]);
 
     useEffect(() => {
-      fetch("https://api.nytimes.com/svc/topstories/v2/fashion.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
-      .then(res => res.json())
-      .then(data=> setMyTravel(data.results))
-    }, [myTravel])
+        const promise = myFetch("/fashion");
+        promise.then((data) => setMyFashion(data.results));
+    }, []);
     
-    const topStories = myTravel.map((article) => (<Article article={article}/>));
+    const topStories = myFasion.map((article) => {
+        let id = nanoid();
+        return <Article key={id} article={article}/>
+        });
+
     return(
         <div className={styles.travelPageContainer}>
             {topStories}

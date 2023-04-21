@@ -2,18 +2,22 @@ import { useEffect, useState } from 'react'
 import { nanoid } from 'nanoid';
 import styles from "./PoliticsPage.module.css";
 import Article from "../../article/Article";
+import myFetch from '../../../api/apiCalls';
+
 
 export default function PoliticsPage() {
-    const [myTravel, setMyTravel] = useState([]);
-    let id = nanoid();
+    const [myPolitics, setMyPolitics] = useState([]);
 
     useEffect(() => {
-      fetch("https://api.nytimes.com/svc/topstories/v2/politics.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE")
-      .then(res => res.json())
-      .then(data=> setMyTravel(data.results))
-    }, [myTravel])
+        const promise = myFetch("/politics");
+        promise.then((data) => setMyPolitics(data.results));
+    }, []);
     
-    const topStories = myTravel.map((article) => (<Article key={id} article={article}/>));
+    const topStories = myPolitics.map((article) => {
+        let id = nanoid();
+        return <Article key={id} article={article}/>
+        });
+
     return(
         <div className={styles.travelPageContainer}>
             {topStories}
