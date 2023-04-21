@@ -19,7 +19,7 @@ export default function WorldPage() {
         });
 
     return(
-        <div className={styles.travelPageContainer}>
+        <div className={styles.worldPageContainer}>
             {topStories}
         </div>
     );

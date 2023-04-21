@@ -8,8 +8,8 @@ import styles from "./App.module.css";
 
 import Article from '../article/Article';
 import Layout from '../Layout';
-import MyModal from '../modal/Modal';
 import NoMatch from '../nomatch/NoMatch';
+import MyModal from '../modal/Modal';
 import ArtsPage from '../pages/arts/ArtsPage';
 import AutomobilesPage from '../pages/automobiles/AutomobilesPage';
 import BooksPage from '../pages/books/BooksPage';
@@ -44,10 +44,10 @@ export default function App() {
 
   return (
     <div className={styles.app}>
-      <Routes >
-      {/* <Routes location={state?.backgroundLocation || location}> */}
+      {/* <Routes > */}
+      <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Layout/>}>
-          {/* <Route index path="/home" element={<HomePage />} /> */}
+          <Route index path="/home" element={<HomePage />} />
           {/* <Route index element={<HomePage />} /> */}
           <Route path="/arts" element={<ArtsPage/>} />
           <Route path="/automobiles" element={<AutomobilesPage/>} />
@@ -73,16 +73,15 @@ export default function App() {
           <Route path="/upshot" element={<UpshotPage />} />
           <Route path="/us" element={<USPage />} />
           <Route path="/world" element={<WorldPage />} />
-          {/* <Route path=":section/:id" element={<MyModal />}></Route> */}
-          <Route path="*" element={<NoMatch />} />
+          {/* <Route path="*" element={<NoMatch />} /> */}
         </Route>
       </Routes>
 
-      {/* {state?.backgroundLocation && (
+      {state?.backgroundLocation && (
         <Routes>
-          <Route path="/:section/:title" element={<MyModal />}/>
+          <Route path="/:section/:title" element={<MyModal backgroundLocation={backgroundLocation}/>}/>
         </Routes>
-      )} */}
+      )}
  </div>
   )
 }

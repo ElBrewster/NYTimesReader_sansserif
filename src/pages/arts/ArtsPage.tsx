@@ -14,9 +14,8 @@ export default function ArtsPage() {
     
     const topStories = myArts.map((article, index) => {
         let id = nanoid();
-        // console.log("index", index)
         return <Article key={index} article={article}/>
-        });
+    });
 
     return(
         <div className={styles.travelPageContainer}>

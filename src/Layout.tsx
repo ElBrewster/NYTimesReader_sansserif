@@ -3,7 +3,6 @@ import "./index.css";
 import { NavLink, Outlet } from "react-router-dom";
 import Header from "./header/Header";
 import { nanoid } from "nanoid";
-import Modal from "./modal/Modal";
 import oneData from "../data/oneArticle.js";
 
 export default function Layout() {
