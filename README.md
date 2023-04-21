@@ -2,10 +2,16 @@
 
 ## **Overview**
 ## View App 
-
-![PXL_20230421_152554431](https://user-images.githubusercontent.com/113723085/233675783-358927e5-c9a9-44cf-8ed9-a88c02d4c369.jpg)
-### Deployed App
 ### Screenshots
+
+<img width="467" alt="Screen Shot 2023-04-21 at 8 30 34 AM" src="https://user-images.githubusercontent.com/113723085/233676332-2757b4ec-38d2-409f-a8d2-da0c3e689617.png">
+
+<img width="480" alt="Screen Shot 2023-04-21 at 8 30 19 AM" src="https://user-images.githubusercontent.com/113723085/233676342-fb89830a-97df-49b9-866b-a5efd3ca3812.png">
+
+<img width="1023" alt="Screen Shot 2023-04-21 at 8 30 01 AM" src="https://user-images.githubusercontent.com/113723085/233676359-314025b6-ecf5-4741-b057-9caac11ef3c4.png">
+
+## Planning
+![PXL_20230421_152554431](https://user-images.githubusercontent.com/113723085/233675783-358927e5-c9a9-44cf-8ed9-a88c02d4c369.jpg)
 
 ## Setup
 ### Installation Instructions For Front-End
