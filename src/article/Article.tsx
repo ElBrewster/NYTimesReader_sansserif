@@ -5,7 +5,8 @@ import { nanoid } from 'nanoid';
 import { Link, Outlet, useLocation, useParams, useNavigate } from 'react-router-dom';
 
 export default function Article({article}) {
-    const [click, setClick] = useState(false)
+    const [click, setClick] = useState(false);
+
     const {section, subsection, abstract, title, url, byline, multimedia} = article;
     let id = nanoid();
     const multimediaDisplay = multimedia[1] ? <div className={styles.imageContainer}>
@@ -26,8 +27,8 @@ export default function Article({article}) {
 
     return (
         <div>
-
             <div className={styles.article}>
+                
                 <Link  
                     key={id} 
                     to={`/${section}/${title}`}
@@ -35,6 +36,7 @@ export default function Article({article}) {
                 >
                     <h2 className={styles.title}>{title}</h2>
                 </Link>
+
                 <p className={styles.byline}>{byline}</p>
                 <p className={styles.abstract}>{abstract}</p>
                 <button onClick={handleClick} className={styles.hideShowButton}>{toggleButtonText}</button>

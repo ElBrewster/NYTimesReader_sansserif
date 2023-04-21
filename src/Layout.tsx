@@ -15,8 +15,8 @@ export default function Layout() {
         // add a conditional for two-word links if we want to have normal casing as opposed to all caps (if it's realestate or topstories, etc., do particular cases)
         // let sectionTitle = removeSlash.charAt(0).toUpperCase() + removeSlash.slice(1);
         return <NavLink to={section} key={id} className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>{sectionTitle}</NavLink>
+    });
 
-    })
     return (
         <div className="layoutContainer">
             <div className="topContainer">

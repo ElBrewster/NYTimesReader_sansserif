@@ -40,7 +40,7 @@ export default function App() {
   let location = useLocation();
   let state = location.state as { backgroundLocation?: Location };
 
-  console.log("backgroundLocation", location.state)
+  console.log("location.state", location.state)
 
   return (
     <div className={styles.app}>
@@ -70,18 +70,21 @@ export default function App() {
           <Route path="/technology" element={<TechnologyPage />} />
           {/* <Route path="/topstories" element={<TopStoriesPage />} /> */}
           <Route path="/travel" element={<TravelPage />} />
+
+          <Route path="/t-magazine" element={<TravelPage />} />
           <Route path="/upshot" element={<UpshotPage />} />
           <Route path="/us" element={<USPage />} />
           <Route path="/world" element={<WorldPage />} />
-          {/* <Route path="*" element={<NoMatch />} /> */}
+          <Route path="*" element={<NoMatch />} />
+          <Route path="/:section/:title" element={<MyModal/>}/>
         </Route>
       </Routes>
 
-      {state?.backgroundLocation && (
+      {/* {state?.backgroundLocation && (
         <Routes>
-          <Route path="/:section/:title" element={<MyModal backgroundLocation={backgroundLocation}/>}/>
+          <Route path="/:section/:title" element={<MyModal />}/>
         </Routes>
-      )}
+      )} */}
  </div>
   )
 }
