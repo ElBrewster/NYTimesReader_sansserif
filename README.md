@@ -1,12 +1,12 @@
-# **NYTReaders *sans-serif** 
+# **NYTReader (sans-serif)** 
 
 ## **Overview**
 ## View App 
 ### Screenshots
 
-<img width="467" alt="Screen Shot 2023-04-21 at 8 30 34 AM" src="https://user-images.githubusercontent.com/113723085/233676332-2757b4ec-38d2-409f-a8d2-da0c3e689617.png">
-
 <img width="480" alt="Screen Shot 2023-04-21 at 8 30 19 AM" src="https://user-images.githubusercontent.com/113723085/233676342-fb89830a-97df-49b9-866b-a5efd3ca3812.png">
+
+<img width="467" alt="Screen Shot 2023-04-21 at 8 30 34 AM" src="https://user-images.githubusercontent.com/113723085/233676332-2757b4ec-38d2-409f-a8d2-da0c3e689617.png">
 
 <img width="1918" alt="Screen Shot 2023-04-21 at 8 33 05 AM" src="https://user-images.githubusercontent.com/113723085/233677455-8c1887d7-948f-429b-838a-86091b6c2033.png">
 
