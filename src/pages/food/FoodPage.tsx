@@ -11,7 +11,7 @@ export default function FoodPage() {
     useEffect(() => {
         const promise = myFetch("/food");
         promise.then((data) => setMyFood(data.results));
-    }, [myFood]);
+    }, []);
     
     const topStories = myFood.map((article) => {
         let id = nanoid();

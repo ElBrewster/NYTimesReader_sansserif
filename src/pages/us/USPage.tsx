@@ -11,7 +11,7 @@ export default function USPage() {
     useEffect(() => {
         const promise = myFetch("/us");
         promise.then((data) => setMyUS(data.results));
-    }, [myUS]);
+    }, []);
     
     const topStories = myUS.map((article) => {
         let id = nanoid();

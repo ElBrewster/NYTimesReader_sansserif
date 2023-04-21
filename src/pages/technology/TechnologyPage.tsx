@@ -11,7 +11,7 @@ export default function TechnologyPage() {
     useEffect(() => {
         const promise = myFetch("/technology");
         promise.then((data) => setMyTechnology(data.results));
-    }, [myTechnology]);
+    }, []);
     
     const topStories = myTechnology.map((article) => {
         let id = nanoid();

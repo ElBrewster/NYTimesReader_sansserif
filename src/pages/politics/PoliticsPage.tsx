@@ -11,7 +11,7 @@ export default function PoliticsPage() {
     useEffect(() => {
         const promise = myFetch("/politics");
         promise.then((data) => setMyPolitics(data.results));
-    }, [myPolitics]);
+    }, []);
     
     const topStories = myPolitics.map((article) => {
         let id = nanoid();

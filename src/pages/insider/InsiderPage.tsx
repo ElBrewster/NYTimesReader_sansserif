@@ -11,7 +11,7 @@ export default function InsiderPage() {
     useEffect(() => {
         const promise = myFetch("/insider");
         promise.then((data) => setMyInsider(data.results));
-    }, [myInsider]);
+    }, []);
     
     const topStories = myInsider.map((article) => {
         let id = nanoid();

@@ -11,7 +11,7 @@ export default function MoviesPage() {
     useEffect(() => {
         const promise = myFetch("/movies");
         promise.then((data) => setMyMovies(data.results));
-    }, [myMovies]);
+    }, []);
     
     const topStories = myMovies.map((article) => {
         let id = nanoid();

@@ -11,7 +11,7 @@ export default function BooksPage() {
     useEffect(() => {
         const promise = myFetch("/books");
         promise.then((data) => setMyBooks(data.results));
-    }, [myBooks]);
+    }, []);
     
     const topStories = myBooks.map((article) => {
         let id = nanoid();

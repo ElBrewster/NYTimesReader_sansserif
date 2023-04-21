@@ -11,7 +11,7 @@ export default function SciencePage() {
     useEffect(() => {
         const promise = myFetch("/science");
         promise.then((data) => setMyScience(data.results));
-    }, [myScience]);
+    }, []);
     
     const topStories = myScience.map((article) => {
         let id = nanoid();

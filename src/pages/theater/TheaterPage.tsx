@@ -11,7 +11,7 @@ export default function TheaterPage() {
     useEffect(() => {
         const promise = myFetch("/theater");
         promise.then((data) => setMyTheater(data.results));
-    }, [myTheater]);
+    }, []);
     
     const topStories = myTheater.map((article) => {
         let id = nanoid();

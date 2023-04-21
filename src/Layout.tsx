@@ -3,6 +3,8 @@ import "./index.css";
 import { NavLink, Outlet } from "react-router-dom";
 import Header from "./header/Header";
 import { nanoid } from "nanoid";
+import Modal from "./modal/Modal";
+import oneData from "../data/oneArticle.js";
 
 export default function Layout() {
     let sections = ["/arts", "/automobiles", "/books", "/fashion", "/food", "/health", "/insider", "/magazine", "/movies", "/nyregion", "/obituaries", "/opinion", "/politics", "/realestate", "/science", "/sundayreview", "/technology", "/theater", "/t-magazine", "/topstories", "/travel", "/upshot", "/business", "/sports", "/us", "/world"];

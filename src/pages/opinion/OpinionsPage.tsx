@@ -11,7 +11,7 @@ export default function OpinionsPage() {
     useEffect(() => {
         const promise = myFetch("/opinion");
         promise.then((data) => setMyOpinion(data.results));
-    }, [myOpinion]);
+    }, []);
     
     const topStories = myOpinion.map((article) => {
         let id = nanoid();

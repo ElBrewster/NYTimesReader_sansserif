@@ -11,7 +11,7 @@ export default function HomePage() {
     useEffect(() => {
         const promise = myFetch("/home");
         promise.then((data) => setMyHome(data.results));
-    }, [myHome]);
+    }, []);
     
     const topStories = myHome.map((article) => {
         let id = nanoid();

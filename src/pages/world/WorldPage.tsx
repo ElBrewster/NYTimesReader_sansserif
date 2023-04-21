@@ -11,7 +11,7 @@ export default function WorldPage() {
     useEffect(() => {
         const promise = myFetch("/world");
         promise.then((data) => setMyWorld(data.results));
-    }, [myWorld]);
+    }, []);
     
     const topStories = myWorld.map((article) => {
         let id = nanoid();

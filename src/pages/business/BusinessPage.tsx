@@ -11,7 +11,7 @@ export default function BusinessPage() {
     useEffect(() => {
         const promise = myFetch("/business");
         promise.then((data) => setMyBusiness(data.results));
-    }, [myBusiness]);
+    }, []);
     
     const topStories = myBusiness.map((article) => {
         let id = nanoid();

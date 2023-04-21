@@ -10,7 +10,7 @@ export default function SportsPage() {
     useEffect(() => {
         const promise = myFetch("/sports");
         promise.then((data) => setMySports(data.results));
-    }, [mySports]);
+    }, []);
     
     const topStories = mySports.map((article) => {
         let id = nanoid();

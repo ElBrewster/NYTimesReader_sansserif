@@ -11,7 +11,7 @@ export default function HealthPage() {
     useEffect(() => {
         const promise = myFetch("/health");
         promise.then((data) => setMyHealth(data.results));
-    }, [myHealth]);
+    }, []);
     
     const topStories = myHealth.map((article) => {
         let id = nanoid();

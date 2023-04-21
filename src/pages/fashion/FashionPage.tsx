@@ -11,7 +11,7 @@ export default function FashionPage() {
     useEffect(() => {
         const promise = myFetch("/fashion");
         promise.then((data) => setMyFashion(data.results));
-    }, [myFasion]);
+    }, []);
     
     const topStories = myFasion.map((article) => {
         let id = nanoid();

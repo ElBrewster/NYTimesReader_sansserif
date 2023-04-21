@@ -11,7 +11,7 @@ export default function NYRegionPage() {
     useEffect(() => {
         const promise = myFetch("/nyregion");
         promise.then((data) => setmyNYRegion(data.results));
-    }, [myNYRegion]);
+    }, []);
     
     const topStories = myNYRegion.map((article) => {
         let id = nanoid();

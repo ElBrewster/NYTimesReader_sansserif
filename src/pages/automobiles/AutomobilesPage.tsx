@@ -10,7 +10,7 @@ export default function AutomobilesPage() {
     useEffect(() => {
         const promise = myFetch("/automobiles");
         promise.then((data) => setMyAutomobiles(data.results));
-    }, [myAutomobiles]);
+    }, []);
     
     const topStories = myAutomobiles.map((article) => {
         let id = nanoid();

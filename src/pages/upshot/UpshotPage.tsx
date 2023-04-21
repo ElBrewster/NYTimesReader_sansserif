@@ -11,7 +11,7 @@ export default function UpshotPage() {
     useEffect(() => {
         const promise = myFetch("/upshot");
         promise.then((data) => setMyUpshot(data.results));
-    }, [myUpshot]);
+    }, []);
     
     const topStories = myUpshot.map((article) => {
         let id = nanoid();

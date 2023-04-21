@@ -11,7 +11,7 @@ export default function SundayReviewPage() {
     useEffect(() => {
         const promise = myFetch("/sundayreview");
         promise.then((data) => setMySundayReview(data.results));
-    }, [mySundayReview]);
+    }, []);
     
     const topStories = mySundayReview.map((article) => {
         let id = nanoid();

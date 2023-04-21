@@ -11,7 +11,7 @@ export default function TravelPage() {
     useEffect(() => {
         const promise = myFetch("/travel");
         promise.then((data) => setMyTravel(data.results));
-    }, [myTravel]);
+    }, []);
     
     const topStories = myTravel.map((article) => {
         let id = nanoid();

@@ -4,3 +4,13 @@
     min-height: 2rem;
     min-width: 2rem;
 }
+
+.media {
+    max-width: fit-content;
+}
+
+.bigView {
+    background-color: red;
+    min-width: 100vw;
+    min-height: 100vh;
+}

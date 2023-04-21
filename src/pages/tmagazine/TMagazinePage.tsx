@@ -11,7 +11,7 @@ export default function TMagazinePage() {
     useEffect(() => {
         const promise = myFetch("/t-magazine");
         promise.then((data) => setMyTMagazine(data.results));
-    }, [myTMagazine]);
+    }, []);
     
     const topStories = myTMagazine.map((article) => {
         let id = nanoid();

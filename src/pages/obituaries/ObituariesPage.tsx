@@ -10,7 +10,7 @@ export default function ObituariesPage() {
     useEffect(() => {
         const promise = myFetch("/obituaries");
         promise.then((data) => setMyObituaries(data.results));
-    }, [myObituaries]);
+    }, []);
     
     const topStories = myObituaries.map((article) => {
         let id = nanoid();

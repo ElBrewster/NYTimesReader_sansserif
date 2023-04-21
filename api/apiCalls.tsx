@@ -10,9 +10,6 @@ async function myFetch(sectionName) {
     catch (error) {
         console.error(`Could not get articles: ${error}`)
     }
-    // await fetch(`https://api.nytimes.com/svc/topstories/v2/${sectionName}.json?api-key=3zPvKXZK3DW8O5MVU3GWnrCueyAt01jE`)
-    // .then(res => res.json())
-    // .then(data=> setterFunction(data.results))
 }
     
 export default myFetch;

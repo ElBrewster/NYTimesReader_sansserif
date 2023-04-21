@@ -12,7 +12,7 @@ export default function TopStoriesPage() {
     useEffect(() => {
         const promise = myFetch("/topstories");
         promise.then((data) => setMyTopStories(data.results));
-    }, [myTopStories]);
+    }, []);
     
     const topStories = myTopStories.map((article) => {
         let id = nanoid();

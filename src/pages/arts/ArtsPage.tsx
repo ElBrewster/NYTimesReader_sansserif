@@ -10,11 +10,12 @@ export default function ArtsPage() {
     useEffect(() => {
         const promise = myFetch("/arts");
         promise.then((data) => setMyArts(data.results));
-    }, [myArts]);
+    }, []);
     
-    const topStories = myArts.map((article) => {
+    const topStories = myArts.map((article, index) => {
         let id = nanoid();
-        return <Article key={id} article={article}/>
+        // console.log("index", index)
+        return <Article key={index} article={article}/>
         });
 
     return(

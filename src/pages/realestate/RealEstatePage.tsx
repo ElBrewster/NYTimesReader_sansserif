@@ -11,7 +11,7 @@ export default function RealEstatePage() {
     useEffect(() => {
         const promise = myFetch("/realestate");
         promise.then((data) => setMyRealEstate(data.results));
-    }, [myRealEstate]);
+    }, []);
     
     const topStories = myRealEstate.map((article) => {
         let id = nanoid();

@@ -65,8 +65,10 @@ select {
   }
 }
 /* --------------------------- */
+
 .topContainer {
   background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg);
+  background-size: cover;
   object-fit: cover;
 }
 
