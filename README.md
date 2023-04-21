@@ -8,7 +8,9 @@
 
 <img width="480" alt="Screen Shot 2023-04-21 at 8 30 19 AM" src="https://user-images.githubusercontent.com/113723085/233676342-fb89830a-97df-49b9-866b-a5efd3ca3812.png">
 
-<img width="1023" alt="Screen Shot 2023-04-21 at 8 30 01 AM" src="https://user-images.githubusercontent.com/113723085/233676359-314025b6-ecf5-4741-b057-9caac11ef3c4.png">
+<img width="1918" alt="Screen Shot 2023-04-21 at 8 33 05 AM" src="https://user-images.githubusercontent.com/113723085/233677455-8c1887d7-948f-429b-838a-86091b6c2033.png">
+
+<img width="960" alt="Screen Shot 2023-04-21 at 8 32 56 AM" src="https://user-images.githubusercontent.com/113723085/233677461-f3d190ab-a16e-4610-ab91-9083c2c03305.png">
 
 ## Planning
 ![PXL_20230421_152554431](https://user-images.githubusercontent.com/113723085/233675783-358927e5-c9a9-44cf-8ed9-a88c02d4c369.jpg)
