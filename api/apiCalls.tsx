@@ -1,6 +1,6 @@
 const apiKey = import.meta.env.VITE_API_KEY;
 
-async function myFetch(sectionName) {
+async function myFetch(sectionName: string) {
     try {
         const response = await fetch(`https://api.nytimes.com/svc/topstories/v2/${sectionName}.json?api-key=${apiKey}`);
         if(!response.ok) {

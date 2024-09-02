@@ -10,9 +10,15 @@ interface ArticleProps {
         title: string;
         url: string;
         byline: string;
-        multimedia: string[];
+        multimedia: MultiMedia[];
     }
 }
+
+interface MultiMedia {
+    url: string;
+    caption: string;
+}
+
 export default function Article({article}: ArticleProps): JSX.Element {
     const [click, setClick] = useState<boolean>(false);
 

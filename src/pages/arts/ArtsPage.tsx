@@ -10,7 +10,7 @@ interface ArticleObj {
     title: string;
     url: string;
     byline: string;
-    multimedia: string[];
+    multimedia: Object[];
 }
 export default function ArtsPage() {
     const [myArts, setMyArts] = useState([]);
@@ -21,6 +21,7 @@ export default function ArtsPage() {
     }, []);
     
     const topStories = myArts.map((article: ArticleObj, index) => {
+        console.log("arts article: ", article);
         return <Article key={index} article={article}/>;
     });
 
