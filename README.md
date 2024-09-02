@@ -1,11 +1,24 @@
 # **NYTReader (sans-serif)** 
 
+## View App 
+[NYTimesReader *sans-serif](https://ny-times-reader-sansserif-xoiw-p8l3fobq0-elbrewsters-projects.vercel.app/)
+
 ## **Overview**
 
 The "NYTReader *sans-serif" is a React & TypeScript web app that presents current stories from the New York Times. A reader can select a section of the newspaper from the many choices at the top of the app, and then browse through the current articles in the chosen section. If an article is of particular interest, there is a "Show More" button to expand that article for additional information.
 
-## View App 
-[NYTimesReader *sans-serif](https://ny-times-reader-sansserif-xoiw-p8l3fobq0-elbrewsters-projects.vercel.app/)
+
+## Libraries and Frameworks
+<div>
+  <img src="https://img.shields.io/badge/TypeScript-gray?style=for-the-badge&logo=typescript&logoColor=3178C6" width="100" height="30"/>
+  <img src="https://img.shields.io/badge/-react-333333?logo=react&style=for-the-badge" width="100" height="30"/> 
+  <img src="https://img.shields.io/badge/-react%20router-f44250?logo=react%20router&logoColor=white&style=for-the-badge" width="140" height="30"/>
+  <img src="https://img.shields.io/badge/-cypress-007780?logo=cypress&logoColor=white&style=for-the-badge" width="100" height="30"/>
+  <img src="https://img.shields.io/badge/-CSS3-315780?logo=css3&style=for-the-badge" width="100" height="30"/>
+  <img src="https://img.shields.io/badge/-npm-c12127?logo=npm&logoColor=white&style=for-the-badge" width="80"  height="30"/>
+  <img src="https://img.shields.io/badge/-vite-333333?logo=vite&style=for-the-badge" width="80" height="30"/>
+</div>
+
 
 ### Screenshots
 
@@ -32,15 +45,6 @@ The "NYTReader *sans-serif" is a React & TypeScript web app that presents curren
 10. Open the local repository in VS Code by typing: `code .`
 11. Type `npm run dev` in your Terminal to run the Vite app.
 
-## Libraries and Frameworks
-<div>
-  <img src="https://img.shields.io/badge/-react-333333?logo=react&style=for-the-badge" width="100" height="30"/> 
-  <img src="https://img.shields.io/badge/-react%20router-f44250?logo=react%20router&logoColor=white&style=for-the-badge" width="140" height="30"/>
-  <img src="https://img.shields.io/badge/-cypress-007780?logo=cypress&logoColor=white&style=for-the-badge" width="100" height="30"/>
-  <img src="https://img.shields.io/badge/-CSS3-315780?logo=css3&style=for-the-badge" width="100" height="30"/>
-  <img src="https://img.shields.io/badge/-npm-c12127?logo=npm&logoColor=white&style=for-the-badge" width="80"  height="30"/>
-  <img src="https://img.shields.io/badge/-vite-333333?logo=vite&style=for-the-badge" width="80" height="30"/>
-</div>
 
 This app was made by El Brewster! You can find me at:
     * [GitHub](https://github.com/ElBrewster)
