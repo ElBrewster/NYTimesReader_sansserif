@@ -1,7 +1,8 @@
 .article {
-    background-color: rgb(149, 109, 112, .4);
-    border: 2px solid #956d70;
-    margin: .2rem;
+    background-color: rgb(175, 140, 142);
+    border: 2px solid #7e5a5d;
+    margin: .3rem;
+    padding: .2rem;
     min-height: 2rem;
     min-width: 2rem;
 }
@@ -39,9 +40,10 @@
 }
 
 .hrefLink {
+    color: rgb(13, 13, 88);
     font-family: sans-serif;
     font-size: 1.5rem;
-    margin-top: .5rem;
+    padding-top: .5rem;
     text-decoration: underline;
 }
 
@@ -50,11 +52,9 @@
 }
 
 .bigView {
-    background: linear-gradient(#ffffff, 50%, #fbeeef);
-    background-color: rgb(149, 109, 112, .2);
     border-right: 1px solid #8f4145;
     min-width: 100vw;
-    min-height: 70vh;
+    /* min-height: 70vh; */
     padding: 2rem;
 }
 

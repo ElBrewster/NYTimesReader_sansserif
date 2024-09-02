@@ -25,7 +25,9 @@ export default function Layout() {
                 </nav>
                 <Header />
             </div>
-            <Outlet />
+            <div className="outletContainer">
+                <Outlet />
+            </div>
         </div>
     );
 }

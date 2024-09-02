@@ -69,12 +69,12 @@ select {
 /* --------------------------- */
 
 .topContainer {
-  /* background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg); */
   background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped.jpg);
+  /* background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg); */
   background-size: cover;
+  object-fit: cover;
   display: flex;
   flex-direction: column;
-  object-fit: cover;
 }
 
 .layoutContainer {
@@ -84,6 +84,12 @@ select {
   flex-direction: column;
 }
 
+.outletContainer {
+  background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped-flipped.jpg);
+  /* background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg); */
+  background-size: cover;
+  object-fit: cover;
+}
 .newsPaperSections {
   display: flex;
   flex-direction: row;
