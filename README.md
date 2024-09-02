@@ -2,6 +2,7 @@
 
 ## **Overview**
 ## View App 
+[NYTimesReader *sans serif](https://ny-times-reader-sansserif-xoiw-df3km476m-elbrewsters-projects.vercel.app/home)
 ### Screenshots
 
 <img width="480" alt="Screen Shot 2023-04-21 at 8 30 19 AM" src="https://user-images.githubusercontent.com/113723085/233676342-fb89830a-97df-49b9-866b-a5efd3ca3812.png">
