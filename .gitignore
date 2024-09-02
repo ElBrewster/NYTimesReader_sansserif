@@ -24,4 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 
-/cypresscopies
+cypresscopies/*
+cypresscopies/AllMovies.cy.js
+cypresscopies/SingleMovie.cy.js
