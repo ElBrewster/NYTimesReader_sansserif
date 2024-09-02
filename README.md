@@ -1,8 +1,11 @@
 # **NYTReader (sans-serif)** 
 
 ## **Overview**
+
+The "NYTReader *sans-serif" is a React & TypeScript web app that presents current stories from the New York Times. A reader can select a section of the newspaper from the many choices at the top of the app, and then browse through the current articles in the chosen section. If an article is of particular interest, there is a "Show More" button to expand that article for additional information.
+
 ## View App 
-[NYTimesReader *sans serif](https://ny-times-reader-sansserif-xoiw-p8l3fobq0-elbrewsters-projects.vercel.app/)
+[NYTimesReader *sans-serif](https://ny-times-reader-sansserif-xoiw-p8l3fobq0-elbrewsters-projects.vercel.app/)
 
 ### Screenshots
 
@@ -14,19 +17,9 @@
 
 <img width="425" alt="Screen Shot 2024-09-02 at 12 56 07 PM" src="https://github.com/user-attachments/assets/217062ac-3dce-4fe2-9f51-8bdd11f1f086">
 
-<img width="480" alt="Screen Shot 2023-04-21 at 8 30 19 AM" src="https://user-images.githubusercontent.com/113723085/233676342-fb89830a-97df-49b9-866b-a5efd3ca3812.png">
-
-<img width="467" alt="Screen Shot 2023-04-21 at 8 30 34 AM" src="https://user-images.githubusercontent.com/113723085/233676332-2757b4ec-38d2-409f-a8d2-da0c3e689617.png">
-
-<img width="1918" alt="Screen Shot 2023-04-21 at 8 33 05 AM" src="https://user-images.githubusercontent.com/113723085/233677455-8c1887d7-948f-429b-838a-86091b6c2033.png">
-
-<img width="960" alt="Screen Shot 2023-04-21 at 8 32 56 AM" src="https://user-images.githubusercontent.com/113723085/233677461-f3d190ab-a16e-4610-ab91-9083c2c03305.png">
-
-## Planning
-![PXL_20230421_152554431](https://user-images.githubusercontent.com/113723085/233675783-358927e5-c9a9-44cf-8ed9-a88c02d4c369.jpg)
 
 ## Setup
-### Installation Instructions For Front-End
+### Installation Instructions 
 1. [Click](https://github.com/ElBrewster/NYTimesReader_sansserif) to open repo 
 2. Click the "Fork" button. (This will create a user copy of the repository.)
 3. Open the Terminal application.
