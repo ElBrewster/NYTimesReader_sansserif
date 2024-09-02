@@ -21,13 +21,14 @@ export default function ArtsPage() {
     }, []);
     
     const topStories = myArts.map((article: ArticleObj, index) => {
-        let id = nanoid();
         return <Article key={index} article={article}/>;
     });
 
     return(
         <div className={styles.travelPageContainer}>
-            {topStories}
+            <>
+                {topStories}
+            </>
         </div>
     );
 }
