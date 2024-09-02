@@ -16,5 +16,8 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+Cypress.Keyboard.defaults({
+    keystrokeDelay: 20,
+})
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

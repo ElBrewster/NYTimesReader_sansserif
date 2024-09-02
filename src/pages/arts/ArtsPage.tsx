@@ -31,7 +31,7 @@ export default function ArtsPage() {
     });
 
     return(
-        <div className={styles.travelPageContainer}>
+        <div className={styles.artsPageContainer}>
             <>
                 {topStories}
             </>

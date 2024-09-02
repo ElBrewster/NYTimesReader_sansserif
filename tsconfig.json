@@ -19,6 +19,11 @@
       "react": [ "./node_modules/@types/react" ]
     }
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "integration/*.ts",
+    "support/*.ts",
+    "../node_modules/cypress"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
