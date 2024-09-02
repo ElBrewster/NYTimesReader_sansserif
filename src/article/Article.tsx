@@ -1,19 +1,36 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Article.module.css";
 import { nanoid } from 'nanoid';
+import { Link } from 'react-router-dom';
 
-import { Link, Outlet, useLocation, useParams, useNavigate } from 'react-router-dom';
+interface ArticleProps {
+    article: {
+        section: string;
+        abstract: string;
+        title: string;
+        url: string;
+        byline: string;
+        multimedia: MultiMedia[];
+    }
+}
 
-export default function Article({article}) {
-    const [click, setClick] = useState(false);
+interface MultiMedia {
+    url: string;
+    caption: string;
+}
 
-    const {section, subsection, abstract, title, url, byline, multimedia} = article;
+export default function Article({article}: ArticleProps): JSX.Element {
+    const [click, setClick] = useState<boolean>(false);
+
+    const {section, abstract, title, url, byline, multimedia} = article;
     let id = nanoid();
-    const multimediaDisplay = multimedia[1] ? <div className={styles.imageContainer}>
+
+    let multimediaDisplay = multimedia ? <div className={styles.imageContainer}>
                                                 <img className={styles.media} src={multimedia[1].url} alt={multimedia[1].caption} /> 
                                                 <p className={styles.abstract}>{multimedia[1].caption}</p>
-                                             </div>
+                                            </div>
                                             : "";
+    
     const toggleButtonText = click? "Hide" : "Show More";
     const toggleDiv = click ? <section className={styles.bigView}>
                                 <div>{multimediaDisplay}</div>
@@ -24,7 +41,9 @@ export default function Article({article}) {
     function handleClick() {
         setClick(prevClick => !prevClick);
     }
-
+    if(!title || !abstract) {
+        return <></>;
+    } else {
     return (
         <div>
             <div className={styles.article}>
@@ -44,4 +63,5 @@ export default function Article({article}) {
             </div>
         </div>
     );
+    }
 }

@@ -1,6 +1,4 @@
 .app {
-  background-image: url(src/assets/annie-spratt-Bf9PT5qVZvM-unsplash.jpg);
-  background: linear-gradient( rgb(239, 241, 240, .8), 80%, #b9b2aa);
   display: flex;
   flex: 1;
   flex-direction: column;

@@ -26,7 +26,9 @@ ol[role='list'] {
 html:focus-within {
   scroll-behavior: smooth;
 }
-
+:root {
+  display: flex;
+}
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -67,28 +69,38 @@ select {
 /* --------------------------- */
 
 .topContainer {
-  background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg);
+  background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped.jpg);
   background-size: cover;
   object-fit: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 .layoutContainer {
   color: #401c1a;
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 
+.outletContainer {
+  background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped-flipped.jpg);
+  background-size: cover;
+  object-fit: cover;
+  flex: 1;
+}
 .newsPaperSections {
   display: flex;
   flex-direction: row;
   flex: auto;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
 }
 
 .newsPaperSections > * {
   align-self: center;
+  background-color: rgb(237, 237, 237);
   border: 1px solid #8f4145;
   border-radius: .1rem;
   font-family: sans-serif;
@@ -111,4 +123,14 @@ a {
   color:#401c1a;
   font-size: 2rem;
   font-weight: 900;
+}
+
+@media (max-width: 750px) {
+  .active {
+    align-self: center;
+    background-color: #c0bab3;
+    color:#401c1a;
+    font-size: 1.5rem;
+    font-weight: 900;
+  } 
 }
