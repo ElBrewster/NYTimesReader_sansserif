@@ -1,13 +1,22 @@
 import { useState } from "react";
 import styles from "./Article.module.css";
 import { nanoid } from 'nanoid';
-
 import { Link } from 'react-router-dom';
 
-export default function Article({article}) {
-    const [click, setClick] = useState(false);
+interface ArticleProps {
+    article: {
+        section: string;
+        abstract: string;
+        title: string;
+        url: string;
+        byline: string;
+        multimedia: string[];
+    }
+}
+export default function Article({article}: ArticleProps): JSX.Element {
+    const [click, setClick] = useState<boolean>(false);
 
-    const {section, subsection, abstract, title, url, byline, multimedia} = article;
+    const {section, abstract, title, url, byline, multimedia} = article;
     let id = nanoid();
 
     let multimediaDisplay = multimedia ? <div className={styles.imageContainer}>
