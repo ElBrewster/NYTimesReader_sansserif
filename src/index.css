@@ -69,7 +69,7 @@ select {
 /* --------------------------- */
 
 .topContainer {
-  background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped.jpg);
+  background-image: url(public/assets/pexels-karolina-grabowska-5993567-cropped.jpg);
   background-size: cover;
   object-fit: cover;
   display: flex;
@@ -84,7 +84,7 @@ select {
 }
 
 .outletContainer {
-  background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped-flipped.jpg);
+  background-image: url(public/assets/pexels-karolina-grabowska-5993567-cropped-flipped.jpg);
   background-size: cover;
   object-fit: cover;
   flex: 1;
