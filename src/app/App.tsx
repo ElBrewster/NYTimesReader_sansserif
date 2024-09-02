@@ -2,7 +2,6 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import styles from "./App.module.css";
 import Layout from '../Layout';
 import NoMatch from '../nomatch/NoMatch';
-import MyModal from '../modal/Modal';
 import ArtsPage from '../pages/arts/ArtsPage';
 import AutomobilesPage from '../pages/automobiles/AutomobilesPage';
 import BooksPage from '../pages/books/BooksPage';
@@ -62,7 +61,6 @@ export default function App() {
           <Route path="/us" element={<USPage />} />
           <Route path="/world" element={<WorldPage />} />
           <Route path="*" element={<NoMatch />} />
-          <Route path="/:section/:title" element={<MyModal/>}/>
         </Route>
       </Routes>
  </div>
