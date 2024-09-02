@@ -57,3 +57,12 @@
     min-height: 70vh;
     padding: 2rem;
 }
+
+@media (width: 750px) {
+    .hrefLink {
+        font-family: sans-serif;
+        font-size: 1rem;
+        margin-top: .5rem;
+        text-decoration: underline;
+    }
+}
