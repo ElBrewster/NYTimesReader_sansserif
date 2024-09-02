@@ -1,12 +1,5 @@
-
-import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-
-import { nanoid } from 'nanoid';
-
 import styles from "./App.module.css";
-
-import Article from '../article/Article';
 import Layout from '../Layout';
 import NoMatch from '../nomatch/NoMatch';
 import MyModal from '../modal/Modal';
@@ -30,7 +23,6 @@ import SciencePage from '../pages/science/SciencePage';
 import SportsPage from '../pages/sports/SportsPage';
 import SundayReviewPage from '../pages/sundayreview/SundayReviewPage';
 import TechnologyPage from '../pages/technology/TechnologyPage';
-import TopStoriesPage from '../pages/topstories/TopStoriesPage';
 import TravelPage from '../pages/travel/TravelPage';
 import UpshotPage from '../pages/upshot/UpshotPage';
 import USPage from '../pages/us/USPage';
@@ -40,15 +32,11 @@ export default function App() {
   let location = useLocation();
   let state = location.state as { backgroundLocation?: Location };
 
-  console.log("location.state", location.state)
-
   return (
     <div className={styles.app}>
-      {/* <Routes > */}
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Layout/>}>
           <Route index path="/home" element={<HomePage />} />
-          {/* <Route index element={<HomePage />} /> */}
           <Route path="/arts" element={<ArtsPage/>} />
           <Route path="/automobiles" element={<AutomobilesPage/>} />
           <Route path="/books" element={<BooksPage/>} />
@@ -68,9 +56,7 @@ export default function App() {
           <Route path="/sports" element={<SportsPage />} />
           <Route path="/sundayreview" element={<SundayReviewPage />} />
           <Route path="/technology" element={<TechnologyPage />} />
-          {/* <Route path="/topstories" element={<TopStoriesPage />} /> */}
           <Route path="/travel" element={<TravelPage />} />
-
           <Route path="/t-magazine" element={<TravelPage />} />
           <Route path="/upshot" element={<UpshotPage />} />
           <Route path="/us" element={<USPage />} />
@@ -79,12 +65,6 @@ export default function App() {
           <Route path="/:section/:title" element={<MyModal/>}/>
         </Route>
       </Routes>
-
-      {/* {state?.backgroundLocation && (
-        <Routes>
-          <Route path="/:section/:title" element={<MyModal />}/>
-        </Routes>
-      )} */}
  </div>
   )
 }
