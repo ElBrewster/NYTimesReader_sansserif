@@ -58,7 +58,10 @@
     padding: 2rem;
 }
 
-@media (width: 750px) {
+@media (max-width: 750px) {
+    .article {
+        font-size: .8rem;
+    }
     .hrefLink {
         font-family: sans-serif;
         font-size: 1rem;

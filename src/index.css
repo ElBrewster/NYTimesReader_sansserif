@@ -120,7 +120,7 @@ a {
   font-weight: 900;
 }
 
-@media (width: 750px) {
+@media (max-width: 750px) {
   .active {
     align-self: center;
     background-color: #c0bab3;
