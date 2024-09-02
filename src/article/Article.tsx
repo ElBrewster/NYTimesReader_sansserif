@@ -9,11 +9,13 @@ export default function Article({article}) {
 
     const {section, subsection, abstract, title, url, byline, multimedia} = article;
     let id = nanoid();
-    const multimediaDisplay = multimedia[1] ? <div className={styles.imageContainer}>
+
+    let multimediaDisplay = multimedia ? <div className={styles.imageContainer}>
                                                 <img className={styles.media} src={multimedia[1].url} alt={multimedia[1].caption} /> 
                                                 <p className={styles.abstract}>{multimedia[1].caption}</p>
-                                             </div>
+                                            </div>
                                             : "";
+    
     const toggleButtonText = click? "Hide" : "Show More";
     const toggleDiv = click ? <section className={styles.bigView}>
                                 <div>{multimediaDisplay}</div>
