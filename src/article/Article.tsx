@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Article.module.css";
 import { nanoid } from 'nanoid';
 
-import { Link, Outlet, useLocation, useParams, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Article({article}) {
     const [click, setClick] = useState(false);
@@ -26,7 +26,9 @@ export default function Article({article}) {
     function handleClick() {
         setClick(prevClick => !prevClick);
     }
-
+    if(!title || !abstract) {
+        return;
+    } else {
     return (
         <div>
             <div className={styles.article}>
@@ -46,4 +48,5 @@ export default function Article({article}) {
             </div>
         </div>
     );
+    }
 }
