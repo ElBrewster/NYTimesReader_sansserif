@@ -70,7 +70,6 @@ select {
 
 .topContainer {
   background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped.jpg);
-  /* background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg); */
   background-size: cover;
   object-fit: cover;
   display: flex;
@@ -86,7 +85,6 @@ select {
 
 .outletContainer {
   background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped-flipped.jpg);
-  /* background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg); */
   background-size: cover;
   object-fit: cover;
 }
@@ -94,7 +92,7 @@ select {
   display: flex;
   flex-direction: row;
   flex: auto;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
 }
