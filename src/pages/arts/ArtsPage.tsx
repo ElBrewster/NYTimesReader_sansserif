@@ -4,14 +4,20 @@ import styles from  "./ArtsPage.module.css";
 import Article from "../../article/Article";
 import myFetch from '../../../api/apiCalls';
 
-interface ArticleObj {
+interface ArticleProps {
     section: string;
     abstract: string;
     title: string;
     url: string;
     byline: string;
-    multimedia: Object[];
+    multimedia: MultiMedia[];
 }
+
+interface MultiMedia {
+    url: string;
+    caption: string;
+}
+
 export default function ArtsPage() {
     const [myArts, setMyArts] = useState([]);
 
@@ -20,7 +26,7 @@ export default function ArtsPage() {
         promise.then((data) => setMyArts(data.results));
     }, []);
     
-    const topStories = myArts.map((article: ArticleObj, index) => {
+    const topStories = myArts.map((article: ArticleProps, index) => {
         console.log("arts article: ", article);
         return <Article key={index} article={article}/>;
     });
