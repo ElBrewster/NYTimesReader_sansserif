@@ -1,0 +1,38 @@
+    {
+        "articles": [
+        {
+            "section": "arts",
+            "abstract": "The daughter of a rock star, Eve Hewson is not yet…self, but that could change in the coming months.",
+            "title": "Born Into Fame, This Actress Could Soon Have More of Her Own",
+            "url": "https://www.nytimes.com/2024/09/02/arts/television/eve-hewson-a-perfect-couple-netflix.html",
+            "byline": "By Nicole Sperling",
+            "multimedia": [
+                {
+                    "url": "https://static01.nyt.com/images/2024/09/01/multimedia/01evehewson-01-hkqz/01evehewson-01-hkqz-superJumbo.jpg",
+                    "caption": "Eve Hewson stars opposite Nicole Kidman and Liev Schreiber in the buzzy Netflix adaptation “The Perfect Couple.”"            
+                },
+                {
+                    "url": "https://static01.nyt.com/images/2024/09/01/multimedia/01evehewson-01-hkqz/01evehewson-01-hkqz-threeByTwoSmallAt2X.jpg",
+                    "caption": "Eve Hewson stars opposite Nicole Kidman and Liev Schreiber in the buzzy Netflix adaptation “The Perfect Couple.”"
+                }
+            ]
+        },
+        {
+            "section": "arts",
+            "abstract": "The in-demand sideman and Wednesday guitarist shar…raiture on a new solo album, “Manning Fireworks.”",
+            "title": "The Timely Dude-ology of MJ Lenderman",
+            "url": "https://www.nytimes.com/2024/09/02/arts/music/mj-lenderman-manning-fireworks.html",
+            "byline": "By Will Hermes",
+            "multimedia": [
+                {
+                    "url": "https://static01.nyt.com/images/2024/09/03/multimedia/02lenderman-qvgz/02lenderman-qvgz-superJumbo.jpg",
+                    "caption": "“I think if I was doing my music all the time and being the sole center of attention, it would probably drive me a little crazy,” MJ Lenderman said."            
+                },
+                {
+                    "url": "https://static01.nyt.com/images/2024/09/03/multimedia/02lenderman-qvgz/02lenderman-qvgz-superJumbo.jpg",
+                    "caption": "“I think if I was doing my music all the time and being the sole center of attention, it would probably drive me a little crazy,” MJ Lenderman said."
+                }
+            ]
+        }
+    ]
+}

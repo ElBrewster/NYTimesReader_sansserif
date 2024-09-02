@@ -4,7 +4,7 @@ import Header from "./header/Header";
 import { nanoid } from "nanoid";
 
 export default function Layout() {
-    let sections = ["/arts", "/automobiles", "/books", "/fashion", "/food", "/health", "/insider", "/magazine", "/movies", "/nyregion", "/obituaries", "/opinion", "/politics", "/realestate", "/science", "/sundayreview", "/technology", "/theater", "/t-magazine", "/travel", "/upshot", "/business", "/sports", "/us", "/world"];
+    let sections = ["/arts", "/automobiles", "/books", "/business", "/fashion", "/food", "/health", "/insider", "/magazine", "/movies", "/nyregion", "/obituaries", "/opinion", "/politics", "/realestate", "/science", "/sundayreview", "/technology", "/theater", "/t-magazine", "/travel", "/upshot", "/sports", "/us", "/world"];
 
     const navLinks = sections.map((section) => {
         let id = nanoid();
