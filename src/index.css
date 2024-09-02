@@ -87,6 +87,7 @@ select {
   background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped-flipped.jpg);
   background-size: cover;
   object-fit: cover;
+  flex: 1;
 }
 .newsPaperSections {
   display: flex;
