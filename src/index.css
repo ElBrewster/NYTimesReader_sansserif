@@ -69,7 +69,8 @@ select {
 /* --------------------------- */
 
 .topContainer {
-  background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg);
+  /* background-image: url(src/assets/pexels-karolina-grabowska-5993567.jpg); */
+  background-image: url(src/assets/pexels-karolina-grabowska-5993567-cropped.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -94,6 +95,7 @@ select {
 
 .newsPaperSections > * {
   align-self: center;
+  background-color: rgb(237, 237, 237);
   border: 1px solid #8f4145;
   border-radius: .1rem;
   font-family: sans-serif;
