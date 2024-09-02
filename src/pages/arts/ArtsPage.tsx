@@ -14,7 +14,7 @@ export default function ArtsPage() {
     
     const topStories = myArts.map((article, index) => {
         let id = nanoid();
-        return <Article key={index} article={article}/>
+        return <Article key={index} article={article}/>;
     });
 
     return(

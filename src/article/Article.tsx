@@ -27,7 +27,7 @@ export default function Article({article}) {
         setClick(prevClick => !prevClick);
     }
     if(!title || !abstract) {
-        return;
+        return <></>;
     } else {
     return (
         <div>
