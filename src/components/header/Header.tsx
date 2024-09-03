@@ -8,7 +8,6 @@ export default function Header() {
             <Link to="./home">
                 <h1 className={styles.title}>NYTimes Reader <span className={styles.spanny}>&#42;sans-serif</span></h1> 
             </Link>
-            {/* <FaRegPaperPlane className={styles.airplane2}/> */}
             <FaRegPaperPlane className={styles.airplane}/>
 
         </header>

@@ -22,6 +22,7 @@ import SciencePage from '../../components/pages/science/SciencePage';
 import SportsPage from '../../components/pages/sports/SportsPage';
 import SundayReviewPage from '../../components/pages/sundayreview/SundayReviewPage';
 import TechnologyPage from '../../components/pages/technology/TechnologyPage';
+import TheaterPage from '../pages/theater/TheaterPage';
 import TravelPage from '../../components/pages/travel/TravelPage';
 import UpshotPage from '../../components/pages/upshot/UpshotPage';
 import USPage from '../../components/pages/us/USPage';
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="/sports" element={<SportsPage />} />
           <Route path="/sundayreview" element={<SundayReviewPage />} />
           <Route path="/technology" element={<TechnologyPage />} />
+          <Route path="/theater" element={<TheaterPage />} />
           <Route path="/travel" element={<TravelPage />} />
           <Route path="/t-magazine" element={<TravelPage />} />
           <Route path="/upshot" element={<UpshotPage />} />

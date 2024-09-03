@@ -26,7 +26,6 @@ export default function Article({article}: ArticleProps): JSX.Element {
     const {section, abstract, title, url, byline, multimedia} = article;
     let id = nanoid();
 
-    console.log("multimedia: ", multimedia);
     let mq = window.matchMedia("(max-width: 400px)");
    
     let imgSize = mq.matches ? 
