@@ -36,7 +36,7 @@
 .media {
     border: 2px solid #8f4145;
     border-radius: .1rem;
-    max-width: fit-content;
+    object-fit: cover;
 }
 
 .hrefLink {
@@ -52,9 +52,7 @@
 }
 
 .bigView {
-    /* border-right: 1px solid #8f4145; */
     max-width: fit-content;
-    /* min-height: 70vh; */
     padding: 2rem;
 }
 
