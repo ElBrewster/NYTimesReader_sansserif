@@ -29,7 +29,6 @@ export default function ArtsPage() {
     }, []);
     
     const topStories = myArts?.map((article: ArticleProps, index) => {
-        console.log("arts article: ", article);
         return <Article key={index} article={article.article}/>;
     });
 
