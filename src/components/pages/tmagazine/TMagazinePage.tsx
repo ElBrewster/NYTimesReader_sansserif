@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function TMagazinePage() {
-    const [myTMagazine, setMyTMagazine] = useState([]);
+    const [myTMagazine, setMyTMagazine] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/t-magazine");

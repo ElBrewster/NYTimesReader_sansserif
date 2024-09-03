@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function NYRegionPage() {
-    const [myNYRegion, setmyNYRegion] = useState([]);
+    const [myNYRegion, setmyNYRegion] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/nyregion");

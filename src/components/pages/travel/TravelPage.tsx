@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function TravelPage() {
-    const [myTravel, setMyTravel] = useState([]);
+    const [myTravel, setMyTravel] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/travel");

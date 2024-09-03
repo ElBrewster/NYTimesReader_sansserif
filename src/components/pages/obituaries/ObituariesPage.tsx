@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function ObituariesPage() {
-    const [myObituaries, setMyObituaries] = useState([]);
+    const [myObituaries, setMyObituaries] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/obituaries");

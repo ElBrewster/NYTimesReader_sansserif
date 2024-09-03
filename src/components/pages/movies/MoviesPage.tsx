@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function MoviesPage() {
-    const [myMovies, setMyMovies] = useState([]);
+    const [myMovies, setMyMovies] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/movies");

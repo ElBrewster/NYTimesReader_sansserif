@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function MagazinePage() {
-    const [myMagazine, setMyMagazine] = useState([]);
+    const [myMagazine, setMyMagazine] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/magazine");

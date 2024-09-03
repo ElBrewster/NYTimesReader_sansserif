@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function OpinionsPage() {
-    const [myOpinion, setMyOpinion] = useState([]);
+    const [myOpinion, setMyOpinion] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/opinion");

@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function SundayReviewPage() {
-    const [mySundayReview, setMySundayReview] = useState([]);
+    const [mySundayReview, setMySundayReview] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/sundayreview");

@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function USPage() {
-    const [myUS, setMyUS] = useState([]);
+    const [myUS, setMyUS] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/us");

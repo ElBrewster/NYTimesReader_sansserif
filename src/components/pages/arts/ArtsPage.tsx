@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import { nanoid } from 'nanoid';
 import styles from  "./ArtsPage.module.css";
 import Article from "../../article/Article";
 import myFetch from '../../../../api/apiCalls';
@@ -28,8 +29,9 @@ export default function ArtsPage() {
         promise.then((data) => setMyArts(data));
     }, []);
     
-    const topStories = myArts?.map((article: ArticleProps, index: number) => {
-        return <Article key={index} article={article.article}/>;
+    const topStories = myArts?.map((article: ArticleProps) => {
+        let id = nanoid();
+        return <Article key={id} article={article.article}/>;
     });
 
     return(

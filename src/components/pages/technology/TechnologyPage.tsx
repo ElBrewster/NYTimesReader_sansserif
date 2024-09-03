@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function TechnologyPage() {
-    const [myTechnology, setMyTechnology] = useState([]);
+    const [myTechnology, setMyTechnology] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/technology");

@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function InsiderPage() {
-    const [myInsider, setMyInsider] = useState([]);
+    const [myInsider, setMyInsider] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/insider");
