@@ -4,13 +4,15 @@ import Article from "../../article/Article";
 import myFetch from '../../../../api/apiCalls';
 
 interface ArticleProps {
-    section: string;
-    title: string;
-    abstract: string;
-    published_date: string;
-    url: string;
-    byline: string;
-    multimedia: MultiMedia[];
+    article: {
+        section: string;
+        title: string;
+        abstract: string;
+        published_date: string;
+        url: string;
+        byline: string;
+        multimedia: MultiMedia[];
+    }
 }
 
 interface MultiMedia {
@@ -23,12 +25,12 @@ export default function ArtsPage() {
 
     useEffect(() => {
         const promise = myFetch("/arts");
-        promise.then((data) => setMyArts(data.results));
+        promise.then((data) => setMyArts(data));
     }, []);
     
     const topStories = myArts?.map((article: ArticleProps, index) => {
         console.log("arts article: ", article);
-        return <Article key={index} article={article}/>;
+        return <Article key={index} article={article.article}/>;
     });
 
     return(
