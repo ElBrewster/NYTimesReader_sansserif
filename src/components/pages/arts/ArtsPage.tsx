@@ -21,14 +21,14 @@ interface MultiMedia {
 }
 
 export default function ArtsPage() {
-    const [myArts, setMyArts] = useState([]);
+    const [myArts, setMyArts] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/arts");
         promise.then((data) => setMyArts(data));
     }, []);
     
-    const topStories = myArts?.map((article: ArticleProps, index) => {
+    const topStories = myArts?.map((article: ArticleProps, index: number) => {
         return <Article key={index} article={article.article}/>;
     });
 
