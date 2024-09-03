@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function AutomobilesPage() {
-    const [myAutomobiles, setMyAutomobiles] = useState([]);
+    const [myAutomobiles, setMyAutomobiles] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/automobiles");

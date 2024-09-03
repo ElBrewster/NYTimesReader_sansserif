@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function PoliticsPage() {
-    const [myPolitics, setMyPolitics] = useState([]);
+    const [myPolitics, setMyPolitics] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/politics");

@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function SciencePage() {
-    const [myScience, setMyScience] = useState([]);
+    const [myScience, setMyScience] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/science");

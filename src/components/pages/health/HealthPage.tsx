@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function HealthPage() {
-    const [myHealth, setMyHealth] = useState([]);
+    const [myHealth, setMyHealth] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/health");

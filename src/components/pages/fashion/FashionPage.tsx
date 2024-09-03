@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function FashionPage() {
-    const [myFasion, setMyFashion] = useState([]);
+    const [myFasion, setMyFashion] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/fashion");

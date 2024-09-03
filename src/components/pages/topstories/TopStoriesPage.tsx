@@ -23,7 +23,7 @@ interface MultiMedia {
 }
 
 export default function TopStoriesPage() {
-    const [myTopStories, setMyTopStories] = useState([]);
+    const [myTopStories, setMyTopStories] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/topstories");

@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function RealEstatePage() {
-    const [myRealEstate, setMyRealEstate] = useState([]);
+    const [myRealEstate, setMyRealEstate] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/realestate");

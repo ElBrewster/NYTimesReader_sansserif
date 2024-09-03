@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function WorldPage() {
-    const [myWorld, setMyWorld] = useState([]);
+    const [myWorld, setMyWorld] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/world");

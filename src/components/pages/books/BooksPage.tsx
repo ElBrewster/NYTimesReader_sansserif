@@ -21,7 +21,7 @@ interface MultiMedia {
     caption: string;
 }
 export default function BooksPage() {
-    const [myBooks, setMyBooks] = useState([]);
+    const [myBooks, setMyBooks] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/books");

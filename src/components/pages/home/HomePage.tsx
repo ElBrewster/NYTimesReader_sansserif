@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function HomePage() {
-    const [myHome, setMyHome] = useState([]);
+    const [myHome, setMyHome] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/"); //removed "home" because home should be root

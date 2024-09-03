@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function BusinessPage() {
-    const [myBusiness, setMyBusiness] = useState([]);
+    const [myBusiness, setMyBusiness] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/business");

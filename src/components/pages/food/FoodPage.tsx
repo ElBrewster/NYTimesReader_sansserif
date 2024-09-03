@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function FoodPage() {
-    const [myFood, setMyFood] = useState([]);
+    const [myFood, setMyFood] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/food");

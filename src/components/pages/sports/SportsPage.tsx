@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function SportsPage() {
-    const [mySports, setMySports] = useState([]);
+    const [mySports, setMySports] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/sports");

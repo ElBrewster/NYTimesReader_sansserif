@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function UpshotPage() {
-    const [myUpshot, setMyUpshot] = useState([]);
+    const [myUpshot, setMyUpshot] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/upshot");

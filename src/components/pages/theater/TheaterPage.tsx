@@ -22,7 +22,7 @@ interface MultiMedia {
 }
 
 export default function TheaterPage() {
-    const [myTheater, setMyTheater] = useState([]);
+    const [myTheater, setMyTheater] = useState<any>([]);
 
     useEffect(() => {
         const promise = myFetch("/theater");
