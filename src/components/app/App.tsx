@@ -35,10 +35,10 @@ export default function App() {
   return (
     <div className={styles.app}>
       <Routes location={state?.backgroundLocation || location}>
-        <Route path="/" element={<Layout/>}>
-          <Route index path="/home" element={<HomePage />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
           <Route path="/arts" element={<ArtsPage/>} />
-          <Route path="/automobiles" element={<AutomobilesPage/>} />
+          <Route path="/automobiles" element={<AutomobilesPage />} />
           <Route path="/books" element={<BooksPage/>} />
           <Route path="/business" element={<BusinessPage />} />
           <Route path="/fashion" element={<FashionPage/>} />

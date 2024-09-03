@@ -25,7 +25,7 @@ export default function HomePage() {
     const [myHome, setMyHome] = useState<any>([]);
 
     useEffect(() => {
-        const promise = myFetch("/"); //removed "home" because home should be root
+        const promise = myFetch("/home"); //removed "home" because home should be root
         promise.then((data) => setMyHome(data));
     }, []);
     
