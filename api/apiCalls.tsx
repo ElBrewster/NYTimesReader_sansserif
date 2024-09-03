@@ -1,4 +1,18 @@
 const apiKey = import.meta.env.VITE_API_KEY;
+
+interface JSONResponse {
+    status: string;
+    results: ArticleObject[];
+}
+interface ArticleObject {
+    section: string;
+    title: string;
+    abstract: string;
+    published_date: string;
+    url: string;
+    byline: string;
+    multimedia: MultiMedia[];
+}
 interface ArticleProps {
     article: {
         section: string;
@@ -16,8 +30,9 @@ interface MultiMedia {
     caption: string;
 }
 
-async function cleaner(data: Response, sectionName: string){
-    let clean = data.results.filter(e => e.title !== "");
+async function cleaner(data: JSONResponse, sectionName: string){
+    let { results } = data;
+    let clean = results.filter(e => e.title !== "");
     let sparse = clean?.map(e => {
         let newObj : ArticleProps = {
             article: {
@@ -51,11 +66,12 @@ async function myFetch(sectionName: string) {
             throw new Error(`HTTP error: ${response.status}`);
         }
         const data = await response.json();
+        console.log("data parsed from json: ", data);
         let result = await cleaner(data, sectionName);
         return result;
      }
     catch (error) {
-        console.error(`Could not get articles: ${error}`)
+        console.error(`Could not get articles: ${error}`);
     }
 }
 

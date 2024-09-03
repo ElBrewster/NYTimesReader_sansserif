@@ -28,7 +28,7 @@ export default function Article({article}: ArticleProps): JSX.Element {
 
     let mq = window.matchMedia("(max-width: 400px)");
    
-    let imgSize = mq.matches ? 
+    let imgSize = (multimedia && mq.matches) ? 
         <img className={styles.media} src={multimedia[2]?.url} alt={multimedia[2].caption} />
         : 
         <img className={styles.media} src={multimedia[1].url} alt={multimedia[1].caption} />;
