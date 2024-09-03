@@ -86,8 +86,9 @@ select {
 .outletContainer {
   background-image: url(/assets/pexels-karolina-grabowska-5993567-cropped-flipped.jpg);
   background-size: cover;
-  object-fit: cover;
+  display: flex;
   flex: 1;
+  object-fit: cover;
 }
 .newsPaperSections {
   display: flex;

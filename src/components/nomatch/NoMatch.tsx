@@ -6,7 +6,7 @@ export default function NoMatch() {
     return (
         <div className={styles.noMatchContainer}>
             <p>There's nothing here!</p>
-            <Link to="/">Go Home</Link>
+            <Link to="/" className={styles.linkHome}>Go Home</Link>
         </div>
     );
 }
