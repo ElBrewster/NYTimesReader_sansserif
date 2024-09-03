@@ -37,7 +37,6 @@ export default function Article({article}: ArticleProps): JSX.Element {
     let multimediaDisplay = multimedia ? 
         <div className={styles.imageContainer}>
             {imgSize}
-            <img className={styles.media} src={multimedia[1].url} alt={multimedia[1].caption} /> 
             <p className={styles.abstract}>{multimedia[1].caption}</p>
         </div>
         : 
