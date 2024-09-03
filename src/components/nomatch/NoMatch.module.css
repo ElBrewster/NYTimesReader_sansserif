@@ -1,0 +1,24 @@
+.noMatchContainer {
+    font-family: sans-serif;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.noMatchContainer > * {
+    align-self: center;
+    font-size: 1.3rem;
+    /* flex: auto; */
+}
+
+.linkHome {
+    background-color: #c0bab3;
+    border: 1px solid #8f4145;
+    border-radius: .1rem;
+    padding: .5rem;
+}
+.linkHome:hover {
+    background-color: pink;
+}

@@ -1,6 +1,6 @@
 import "./index.css";
 import { NavLink, Outlet } from "react-router-dom";
-import Header from "./header/Header";
+import Header from "./components/header/Header";
 import { nanoid } from "nanoid";
 
 export default function Layout() {
