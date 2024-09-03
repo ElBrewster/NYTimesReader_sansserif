@@ -5,8 +5,9 @@ import myFetch from '../../../../api/apiCalls';
 
 interface ArticleProps {
     section: string;
-    abstract: string;
     title: string;
+    abstract: string;
+    published_date: string;
     url: string;
     byline: string;
     multimedia: MultiMedia[];
@@ -25,7 +26,7 @@ export default function ArtsPage() {
         promise.then((data) => setMyArts(data.results));
     }, []);
     
-    const topStories = myArts.map((article: ArticleProps, index) => {
+    const topStories = myArts?.map((article: ArticleProps, index) => {
         console.log("arts article: ", article);
         return <Article key={index} article={article}/>;
     });

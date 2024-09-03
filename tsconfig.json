@@ -23,7 +23,11 @@
     "src",
     "integration/*.ts",
     "support/*.ts",
-    "../node_modules/cypress"
+    "../node_modules/cypress",
+    "api/apiCalls.tsx"
   ],
+  "ts-node": {
+    "esm": true,
+  },
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -27,3 +27,5 @@ dist-ssr
 cypresscopies/*
 cypresscopies/AllMovies.cy.js
 cypresscopies/SingleMovie.cy.js
+test.js
+api/apiCallsTest.js
