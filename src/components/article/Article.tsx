@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 interface ArticleProps {
     article: {
         section: string;
-        abstract: string;
         title: string;
+        abstract: string;
+        published_date: string;
         url: string;
         byline: string;
         multimedia: MultiMedia[];

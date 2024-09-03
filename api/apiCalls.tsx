@@ -52,7 +52,6 @@ async function myFetch(sectionName: string) {
         }
         const data = await response.json();
         let result = await cleaner(data, sectionName);
-        console.log("myResults: ", result);
         return result;
      }
     catch (error) {
