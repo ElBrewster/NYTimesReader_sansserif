@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import styles from "./App.module.css";
 import Layout from '../../Layout';
 import NoMatch from '../../components/nomatch/NoMatch';
@@ -29,12 +29,10 @@ import USPage from '../../components/pages/us/USPage';
 import WorldPage from '../../components/pages/world/WorldPage';
 
 export default function App() {
-  let location = useLocation();
-  let state = location.state as { backgroundLocation?: Location };
 
   return (
     <div className={styles.app}>
-      <Routes location={state?.backgroundLocation || location}>
+      <Routes >
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/arts" element={<ArtsPage/>} />

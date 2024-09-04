@@ -26,18 +26,18 @@ export default function Article({article}: ArticleProps): JSX.Element {
     const {section, abstract, title, url, byline, multimedia} = article;
     let id = nanoid();
 
-    let mq = window.matchMedia("(max-width: 400px)");
+    let mq = window.matchMedia("(max-width: 600px)");
    
     let imgSize = (multimedia && mq.matches) ? 
-        <img className={styles.media} src={multimedia[2]?.url} alt={multimedia[2].caption} />
+        <img className={styles.media2} src={multimedia[1]?.url} alt={multimedia[1].caption} />
         : 
-        <img className={styles.media} src={multimedia[1].url} alt={multimedia[1].caption} />;
+        <img className={styles.media} src={multimedia[1]?.url} alt={multimedia[1].caption} />;
 
 
     let multimediaDisplay = multimedia ? 
         <div className={styles.imageContainer}>
             {imgSize}
-            <p className={styles.abstract}>{multimedia[1].caption}</p>
+            <p className={styles.abstract}>{multimedia[1]?.caption}</p>
         </div>
         : 
         "";
