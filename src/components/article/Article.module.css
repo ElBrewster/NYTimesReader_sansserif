@@ -38,6 +38,11 @@
     border-radius: .1rem;
     object-fit: cover;
 }
+.media2 {
+    border: 2px solid #8f4145;
+    border-radius: .1rem;
+    object-fit: scale-down; 
+}
 
 .hrefLink {
     color: rgb(13, 13, 88);
