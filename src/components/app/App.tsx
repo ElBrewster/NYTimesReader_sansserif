@@ -35,7 +35,7 @@ export default function App() {
       <Routes >
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="arts" element={<ArtsPage/>} />
+          <Route path="/arts" element={<ArtsPage/>} />
           <Route path="/automobiles" element={<AutomobilesPage />} />
           <Route path="/books" element={<BooksPage/>} />
           <Route path="/business" element={<BusinessPage />} />

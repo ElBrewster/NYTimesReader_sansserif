@@ -66,7 +66,6 @@ async function myFetch(sectionName: string) {
             throw new Error(`HTTP error: ${response.status}`);
         }
         const data = await response.json();
-        console.log("data parsed from json: ", data);
         let result = await cleaner(data, sectionName);
         return result;
      }
