@@ -1,7 +1,7 @@
 # **NYTReader (sans-serif)** 
 
 ## View App 
-[NYTimesReader *sans-serif](https://ny-times-reader-sansserif-xoiw-p8l3fobq0-elbrewsters-projects.vercel.app/)
+[NYTimesReader *sans-serif](https://ny-times-reader-sansserif.vercel.app/)
 
 ## **Overview**
 
